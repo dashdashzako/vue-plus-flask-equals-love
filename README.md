@@ -1,39 +1,30 @@
-# vue-plus-flask-equals-love
+# Vue + Flask = ❤️
 
-This template should help get you started developing with Vue 3 in Vite.
+Example of running Vue 3 app with Vite and Flask. Application has multiple entrypoints.
 
-## Recommended IDE Setup
+👀 [Original vanilla JS inspiration](https://github.com/tylerlwsmith/vite-with-flask-backend).
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Setup
 
 ```sh
-npm install
+npm i
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-### Compile and Hot-Reload for Development
+## Run the app
+
+### Dev mode
 
 ```sh
 npm run dev
+flask --debug --app main run --port 8000
 ```
 
-### Type-Check, Compile and Minify for Production
+### Prod mode
 
 ```sh
 npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+flask --app main run --port 8000
 ```
